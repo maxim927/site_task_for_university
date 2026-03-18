@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карьера в Grand Gambit</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>... (навигация) ...</header>
+
+    <main class="container">
+        <h1 style="font-size: 4rem; margin-bottom: 1rem;">Работа в Grand Gambit</h1>
+        <p style="font-size: 1.3rem; color: var(--text-dim); max-width: 800px;">
+            Мы создаем не просто игры — мы создаем будущее мобильного гейминга. 
+            Ищем талантливых и увлеченных людей в нашу команду.
+        </p>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin: 4rem 0;">
+            <div class="glass-card" style="padding: 2rem;">
+                <h2 style="color: var(--secondary);">Почему мы?</h2>
+                <ul style="list-style: none;">
+                    <li style="margin: 1rem 0;">✓ Удаленная работа или офис в Минске</li>
+                    <li style="margin: 1rem 0;">✓ Гибкий график</li>
+                    <li style="margin: 1rem 0;">✓ Конкурентная зарплата</li>
+                    <li style="margin: 1rem 0;">✓ Обучение и конференции за счет компании</li>
+                    <li style="margin: 1rem 0;">✓ Молодая и дружная команда</li>
+                </ul>
+            </div>
+            
+            <div class="glass-card" style="padding: 2rem;">
+                <h2 style="color: var(--secondary);">Вакансии</h2>
+                <div style="margin: 1rem 0;">
+                    <h3>Unity-разработчик</h3>
+                    <p>Опыт от 2 лет, знание C#</p>
+                    <a href="#" class="btn-outline" style="margin-top: 0.5rem;">Откликнуться</a>
+                </div>
+                <hr style="border-color: var(--glass-border); margin: 1rem 0;">
+                <div style="margin: 1rem 0;">
+                    <h3>2D/3D Художник</h3>
+                    <p>Опыт в мобильной графике</p>
+                    <a href="#" class="btn-outline" style="margin-top: 0.5rem;">Откликнуться</a>
+                </div>
+                <hr style="border-color: var(--glass-border); margin: 1rem 0;">
+                <div style="margin: 1rem 0;">
+                    <h3>Геймдизайнер</h3>
+                    <p>Понимание метрик и баланса</p>
+                    <a href="#" class="btn-outline" style="margin-top: 0.5rem;">Откликнуться</a>
+                </div>
+            </div>
+        </div>
+        
+        <h2>Откликнуться на вакансию</h2>
+        <div class="glass-card" style="padding: 3rem; max-width: 800px; margin: 2rem 0;">
+            <form id="career-form">
+                <div class="form-group">
+                    <label>Ваше имя *</label>
+                    <input type="text" required>
+                </div>
+                <div class="form-group">
+                    <label>Email *</label>
+                    <input type="email" required>
+                </div>
+                <div class="form-group">
+                    <label>Вакансия</label>
+                    <select>
+                        <option>Unity-разработчик</option>
+                        <option>2D/3D Художник</option>
+                        <option>Геймдизайнер</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Резюме (PDF, DOC) *</label>
+                    <input type="file" accept=".pdf,.doc,.docx" required>
+                    <small class="file-name"></small>
+                </div>
+                <div class="form-group">
+                    <label>Портфолио (ссылка)</label>
+                    <input type="url" placeholder="https://...">
+                </div>
+                <div class="form-group">
+                    <label>Сообщение</label>
+                    <textarea rows="5" placeholder="Расскажите о себе..."></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Отправить заявку</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>...</footer>
+    <script src="js/main.js"></script>
+    <script src="js/forms.js"></script>
+</body>
+</html>

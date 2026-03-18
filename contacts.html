@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты — Grand Gambit</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Grand Gambit</div>
+            <div class="nav-links">
+                <a href="index.html">Главная</a>
+                <a href="about.html">О нас</a>
+                <a href="blog.html">Блог</a>
+                <a href="career.html">Карьера</a>
+                <a href="contacts.html" class="active">Контакты</a>
+                <a href="contacts.html" class="btn-primary">Связаться</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1 style="font-size: 4rem; text-align: center; margin-bottom: 2rem;">Контакты и сотрудничество</h1>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; margin: 3rem 0;">
+            <!-- Для партнеров -->
+            <div class="glass-card" style="padding: 2rem;">
+                <h2 style="color: var(--secondary);">🤝 Для партнеров</h2>
+                <p style="margin: 1rem 0;">Издательства, инвесторы, заказчики разработки</p>
+                <p style="margin: 1rem 0;"><strong>Email:</strong> partner@grandgambit.com</p>
+                <p><strong>Telegram:</strong> @grandgambit_partner</p>
+            </div>
+            
+            <!-- Для прессы -->
+            <div class="glass-card" style="padding: 2rem;">
+                <h2 style="color: var(--secondary);">📰 Для прессы</h2>
+                <p style="margin: 1rem 0;">PR-запросы, медиакит</p>
+                <p style="margin: 1rem 0;"><strong>Email:</strong> pr@grandgambit.com</p>
+                <p><a href="#" style="color: var(--secondary);">Скачать медиакит (PDF)</a></p>
+            </div>
+            
+            <!-- Для игроков -->
+            <div class="glass-card" style="padding: 2rem;">
+                <h2 style="color: var(--secondary);">🎮 Для игроков</h2>
+                <p style="margin: 1rem 0;">Поддержка и сообщество</p>
+                <p style="margin: 1rem 0;"><strong>Discord:</strong> /grandgambit</p>
+                <p><strong>Telegram:</strong> @grandgambit_games</p>
+            </div>
+        </div>
+        
+        <!-- Форма связи -->
+        <h2 style="font-size: 2.5rem; margin: 4rem 0 2rem; text-align: center;">Написать нам</h2>
+        <div class="glass-card" style="padding: 3rem; max-width: 800px; margin: 0 auto;">
+            <form id="contact-form">
+                <div class="form-group">
+                    <label>Тема обращения</label>
+                    <select>
+                        <option>Сотрудничество</option>
+                        <option>Инвестиции</option>
+                        <option>Разработка на заказ</option>
+                        <option>Пресса</option>
+                        <option>Поддержка</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Имя *</label>
+                    <input type="text" required>
+                </div>
+                <div class="form-group">
+                    <label>Email *</label>
+                    <input type="email" required>
+                </div>
+                <div class="form-group">
+                    <label>Сообщение *</label>
+                    <textarea rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary" style="width: 100%;">Отправить</button>
+            </form>
+        </div>
+        
+        <!-- Telegram -->
+        <div style="text-align: center; margin: 4rem 0;">
+            <h2 style="margin-bottom: 2rem;">Быстрая связь</h2>
+            <a href="#" class="btn-primary telegram-link" style="font-size: 1.5rem; padding: 1rem 3rem; display: inline-block;">
+                ✈️ Написать в Telegram
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <!-- такой же футер -->
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/forms.js"></script>
+</body>
+</html>
