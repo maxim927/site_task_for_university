@@ -36,32 +36,22 @@
                 <a href="index.html">Главная</a>
                 <a href="about.html">О нас</a>
                 <a href="career.html">Карьера</a>
-                <a href="contacts.html">Контакты</a>
                 <a href="contacts.html" class="btn-primary">Связаться</a>
             </div>
         </nav>
     </header>
 
     <main class="container">
-        <!-- Контент будет заполнен динамически через JavaScript -->
-        <div id="game-content">
-            <!-- Сюда подставится информация об игре -->
-        </div>
+        <div id="game-content"></div>
         
         <h2>Галерея</h2>
-        <div class="game-gallery" id="game-gallery">
-            <!-- Галерея будет динамической -->
-        </div>
+        <div class="game-gallery" id="game-gallery"></div>
         
         <h2>Характеристики</h2>
-        <div id="game-specs" class="game-specs" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin: 2rem 0;">
-            <!-- Характеристики будут динамическими -->
-        </div>
+        <div id="game-specs" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin: 2rem 0;"></div>
         
         <h2>Похожие проекты</h2>
-        <div class="games-grid" id="similar-games" style="grid-template-columns: repeat(3, 1fr);">
-            <!-- Похожие игры -->
-        </div>
+        <div class="games-grid" id="similar-games" style="grid-template-columns: repeat(3, 1fr);"></div>
     </main>
 
     <footer>
@@ -96,113 +86,46 @@
     </footer>
 
     <script>
-        // База данных игр
         const games = {
             1: {
-                id: 1,
-                name: "Cyber Dungeon",
-                title: "Cyber Dungeon",
-                genre: "RPG",
-                platforms: "iOS / Android",
-                year: "2025",
-                engine: "Unity",
-                description: "Погрузитесь в мрачный киберпанк-мир, где технологии переплетаются с магией. Исследуйте процедурно-генерируемые подземелья, сражайтесь с уникальными боссами и прокачивайте своего персонажа по уникальной системе киберимплантов. Каждое прохождение уникально благодаря системе выбора, которая влияет на сюжет и концовку игры.",
-                longDescription: "Cyber Dungeon — это ролевая игра с элементами roguelike, действие которой происходит в антиутопическом будущем 2087 года. Вы — хакер-изгой, который должен проникнуть в глубины корпоративной сети, чтобы раскрыть тайну исчезновения миллионов людей. Используйте чипы, импланты и взлом, чтобы преодолевать препятствия. Более 50 видов врагов, 10 уникальных боссов и 4 возможные концовки ждут вас!",
-                features: [
-                    "Процедурная генерация подземелий",
-                    "Уникальная система киберимплантов",
-                    "Более 50 видов врагов",
-                    "10 эпических боссов",
-                    "4 возможные концовки"
-                ],
+                id: 1, name: "Cyber Dungeon", title: "Cyber Dungeon", genre: "RPG", platforms: "iOS / Android", year: "2025", engine: "Unity",
+                description: "Погрузитесь в мрачный киберпанк-мир...",
+                longDescription: "Cyber Dungeon — это ролевая игра с элементами roguelike...",
+                features: ["Процедурная генерация подземелий", "Уникальная система киберимплантов", "Более 50 видов врагов", "10 эпических боссов", "4 возможные концовки"],
                 image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-                gallery: [
-                    "https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
-                    "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
-                    "https://images.unsplash.com/photo-1614728263952-84ea256f9679?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80"
-                ]
+                gallery: ["https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80", "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80", "https://images.unsplash.com/photo-1614728263952-84ea256f9679?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80"]
             },
             2: {
-                id: 2,
-                name: "Speed Runner",
-                title: "Speed Runner",
-                genre: "Казуальная",
-                platforms: "Android",
-                year: "2024",
-                engine: "Unity",
-                description: "Динамичный раннер, где скорость — это всё! Меняйте цвета, чтобы проходить через препятствия, собирайте бонусы и соревнуйтесь с друзьями. Простая механика и увлекательный геймплей затягивают с первых секунд. Более 100 уровней и бесконечный режим ждут вас!",
-                longDescription: "Speed Runner — это захватывающий раннер, где вы управляете персонажем, который мчится по неоновой трассе. Ваша задача — менять цвет персонажа, чтобы соответствовать цвету препятствий. Ошибка стоит жизни! Собирайте монеты, открывайте новые скины и улучшайте способности. Режим онлайн-соревнований позволит вам сравнить свои результаты с игроками со всего мира.",
-                features: [
-                    "Более 100 уникальных уровней",
-                    "Бесконечный режим",
-                    "20+ скинов персонажей",
-                    "Онлайн-таблица лидеров",
-                    "Ежедневные задания и награды"
-                ],
+                id: 2, name: "Speed Runner", title: "Speed Runner", genre: "Казуальная", platforms: "Android", year: "2024", engine: "Unity",
+                description: "Динамичный раннер, где скорость — это всё!...",
+                longDescription: "Speed Runner — это захватывающий раннер...",
+                features: ["Более 100 уникальных уровней", "Бесконечный режим", "20+ скинов персонажей", "Онлайн-таблица лидеров", "Ежедневные задания и награды"],
                 image: "https://images.unsplash.com/photo-1551103782-8ab07afd45c1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-                gallery: [
-                    "https://images.unsplash.com/photo-1551103782-8ab07afd45c1?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
-                    "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
-                    "https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80"
-                ]
+                gallery: ["https://images.unsplash.com/photo-1551103782-8ab07afd45c1?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80", "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80", "https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80"]
             },
             3: {
-                id: 3,
-                name: "Galaxy Conquest",
-                title: "Galaxy Conquest",
-                genre: "Стратегия",
-                platforms: "iOS",
-                year: "2025",
-                engine: "Unity",
-                description: "Масштабная космическая стратегия, где вы становитесь командующим космическим флотом. Исследуйте галактики, заключайте союзы и побеждайте врагов в эпических баталиях. Стройте свою империю, развивайте технологии и станьте повелителем галактики!",
-                longDescription: "Galaxy Conquest — это 4X-стратегия в реальном времени, действие которой разворачивается в огромной процедурно-генерируемой вселенной. Вы начинаете с одной планеты и постепенно расширяете свою империю. Исследуйте звездные системы, добывайте ресурсы, развивайте технологии и создавайте мощный флот. Дипломатия, шпионаж и открытые космические сражения — всё это ждет вас в Galaxy Conquest.",
-                features: [
-                    "Огромная процедурно-генерируемая вселенная",
-                    "Более 20 уникальных рас",
-                    "Реалистичная система дипломатии",
-                    "Эпические космические сражения",
-                    "Многопользовательский режим до 100 игроков"
-                ],
+                id: 3, name: "Galaxy Conquest", title: "Galaxy Conquest", genre: "Стратегия", platforms: "iOS", year: "2025", engine: "Unity",
+                description: "Масштабная космическая стратегия...",
+                longDescription: "Galaxy Conquest — это 4X-стратегия в реальном времени...",
+                features: ["Огромная процедурно-генерируемая вселенная", "Более 20 уникальных рас", "Реалистичная система дипломатии", "Эпические космические сражения", "Многопользовательский режим до 100 игроков"],
                 image: "https://images.unsplash.com/photo-1614728263952-84ea256f9679?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-                gallery: [
-                    "https://images.unsplash.com/photo-1614728263952-84ea256f9679?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
-                    "https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
-                    "https://images.unsplash.com/photo-1551103782-8ab07afd45c1?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80"
-                ]
+                gallery: ["https://images.unsplash.com/photo-1614728263952-84ea256f9679?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80", "https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80", "https://images.unsplash.com/photo-1551103782-8ab07afd45c1?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80"]
             },
             4: {
-                id: 4,
-                name: "Mind Maze",
-                title: "Mind Maze",
-                genre: "Головоломка",
-                platforms: "iOS / Android",
-                year: "2024",
-                engine: "Unity",
-                description: "Захватывающие лабиринты для тренировки мозга. Решайте логические задачи, находите выход из запутанных коридоров и развивайте пространственное мышление. Более 200 уровней разной сложности для всей семьи!",
-                longDescription: "Mind Maze — это коллекция интеллектуальных головоломок, которые заставят ваш мозг работать на полную мощность. Вам предстоит находить выход из лабиринтов, решать логические задачи, собирать пазлы и проходить испытания на скорость мышления. Идеальный выбор для тех, кто хочет провести время с пользой и развлечься одновременно.",
-                features: [
-                    "Более 200 уникальных уровней",
-                    "5 режимов сложности",
-                    "Ежедневные головоломки",
-                    "Система достижений",
-                    "Расслабляющая музыка и атмосфера"
-                ],
+                id: 4, name: "Mind Maze", title: "Mind Maze", genre: "Головоломка", platforms: "iOS / Android", year: "2024", engine: "Unity",
+                description: "Захватывающие лабиринты для тренировки мозга...",
+                longDescription: "Mind Maze — это коллекция интеллектуальных головоломок...",
+                features: ["Более 200 уникальных уровней", "5 режимов сложности", "Ежедневные головоломки", "Система достижений", "Расслабляющая музыка и атмосфера"],
                 image: "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-                gallery: [
-                    "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
-                    "https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
-                    "https://images.unsplash.com/photo-1551103782-8ab07afd45c1?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80"
-                ]
+                gallery: ["https://images.unsplash.com/photo-1552820728-8b83bb6b773f?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80", "https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80", "https://images.unsplash.com/photo-1551103782-8ab07afd45c1?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80"]
             }
         };
 
-        // Получаем ID игры из URL
         function getGameId() {
             const params = new URLSearchParams(window.location.search);
             return params.get('id');
         }
 
-        // Загружаем данные игры
         function loadGame() {
             const gameId = getGameId();
             const game = games[gameId];
@@ -212,10 +135,8 @@
                 return;
             }
             
-            // Устанавливаем заголовок страницы
             document.title = `${game.name} — Grand Gambit`;
             
-            // Заполняем основное содержимое
             document.getElementById('game-content').innerHTML = `
                 <div class="game-header">
                     <div>
@@ -230,39 +151,21 @@
                             ${game.features.map(f => `<li>${f}</li>`).join('')}
                         </ul>
                     </div>
-                    
                     <div class="glass-card" style="aspect-ratio: 16/9; background: #000; display: flex; align-items: center; justify-content: center; overflow: hidden;">
                         <img src="${game.image}" alt="${game.name}" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                 </div>
             `;
             
-            // Заполняем галерею
-            document.getElementById('game-gallery').innerHTML = game.gallery.map(img => `
-                <img src="${img}" alt="${game.name} screenshot">
-            `).join('');
+            document.getElementById('game-gallery').innerHTML = game.gallery.map(img => `<img src="${img}" alt="${game.name} screenshot">`).join('');
             
-            // Заполняем характеристики
             document.getElementById('game-specs').innerHTML = `
-                <div class="glass-card" style="padding: 1.5rem; text-align: center;">
-                    <h3 style="color: var(--secondary);">Жанр</h3>
-                    <p>${game.genre}</p>
-                </div>
-                <div class="glass-card" style="padding: 1.5rem; text-align: center;">
-                    <h3 style="color: var(--secondary);">Платформы</h3>
-                    <p>${game.platforms}</p>
-                </div>
-                <div class="glass-card" style="padding: 1.5rem; text-align: center;">
-                    <h3 style="color: var(--secondary);">Движок</h3>
-                    <p>${game.engine}</p>
-                </div>
-                <div class="glass-card" style="padding: 1.5rem; text-align: center;">
-                    <h3 style="color: var(--secondary);">Релиз</h3>
-                    <p>${game.year}</p>
-                </div>
+                <div class="glass-card" style="padding: 1.5rem; text-align: center;"><h3 style="color: var(--secondary);">Жанр</h3><p>${game.genre}</p></div>
+                <div class="glass-card" style="padding: 1.5rem; text-align: center;"><h3 style="color: var(--secondary);">Платформы</h3><p>${game.platforms}</p></div>
+                <div class="glass-card" style="padding: 1.5rem; text-align: center;"><h3 style="color: var(--secondary);">Движок</h3><p>${game.engine}</p></div>
+                <div class="glass-card" style="padding: 1.5rem; text-align: center;"><h3 style="color: var(--secondary);">Релиз</h3><p>${game.year}</p></div>
             `;
             
-            // Заполняем похожие игры (исключаем текущую)
             const similarGames = Object.values(games).filter(g => g.id !== game.id).slice(0, 3);
             document.getElementById('similar-games').innerHTML = similarGames.map(g => `
                 <div class="game-card glass-card">
@@ -275,7 +178,6 @@
             `).join('');
         }
         
-        // Запускаем загрузку при загрузке страницы
         document.addEventListener('DOMContentLoaded', loadGame);
     </script>
     <script src="main.js"></script>
